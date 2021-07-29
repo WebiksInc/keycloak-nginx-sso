@@ -14,6 +14,6 @@ Nginx server requires a configuration file which is located in a repository. Thi
 
 <b>Important note!</b> In order to run this stuff on Windows, docker ip (172.17.0.1) should be replaced with “host.docker.internal” 
 
-The Keycloak application served as a separate container with PostgreSql database as data storage. In order to configure Keycloak to provide authorization level for this example we need to login to the administration area with password and username defined in container environment variables. Admin url: http://localhost:3333/auth/admin/. New realm, client and user should be created as shown in screenshots in the repository. 
+The Keycloak application served as a separate container with PostgreSql database as data storage. In order to configure Keycloak to provide authorization level for this example we need to login to the administration area with password and username defined in container environment variables. Admin url: http://localhost:3333/auth/admin/. <b>New realm, client and user</b> should be created as shown in screenshots in the repository. Once we created new client, <b>client id and secret should be updated in nginx config file.</b> 
 
 If everything is configured properly, on access to “http://localhost/web” we will see the login screen provided by Keycloak and after entering user details which was created in Keycloak we will be redirected to our web server.
